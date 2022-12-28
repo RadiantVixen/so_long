@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zone.c                                             :+:      :+:    :+:   */
+/*   zone_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aatki <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:16:11 by aatki             #+#    #+#             */
-/*   Updated: 2022/12/27 16:27:37 by aatki            ###   ########.fr       */
+/*   Updated: 2022/12/27 17:24:31 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 void	zone_coin(char *s, int i, int len, int lines)
 {
 	if (i < 0 || i > len * lines - 1)
 		return ;
-	if (s[i] != 'C' && s[i] != '0' && s[i] != 'P')
+	if (s[i] != 'C' && s[i] != '0' && s[i] != 'P' && s[i] != 'N')
 		return ;
 	s[i] = 'h';
 	zone_coin(s, i + 1, len, lines);
