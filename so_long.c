@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aatki <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:37:51 by aatki             #+#    #+#             */
-/*   Updated: 2022/12/28 15:41:40 by aatki            ###   ########.fr       */
+/*   Updated: 2023/08/12 01:08:09 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,11 @@ void	so_long(char *path)
 	mlx_key_hook(l.window, new_position, &l);
 	mlx_hook(l.window, 17, 0, ft_exit, &l);
 	mlx_loop(l.mlx);
+}
+
+int	main(int c, char **v)
+{
+	if (c == 2)
+		so_long(v[1]);
+	return (1);
 }
