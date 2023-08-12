@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aatki <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:37:51 by aatki             #+#    #+#             */
-/*   Updated: 2022/12/28 19:47:38 by aatki            ###   ########.fr       */
+/*   Updated: 2023/08/12 01:10:09 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,11 @@ void	so_long(char *path)
 	mlx_loop_hook(l.mlx, animation, &l);
 	mlx_hook(l.window, 17, 0, ft_exit, &l);
 	mlx_loop(l.mlx);
+}
+
+int	main(int c, char **v)
+{
+	if (c == 2)
+		so_long(v[1]);
+	return (1);
 }
