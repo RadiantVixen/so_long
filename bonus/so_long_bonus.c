@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aatki <aatki@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aatki <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:37:51 by aatki             #+#    #+#             */
-/*   Updated: 2023/08/12 01:10:09 by aatki            ###   ########.fr       */
+/*   Updated: 2022/12/28 20:48:42 by aatki            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	so_long(char *path)
 	mlx_key_hook(l.window, new_position, &l);
 	mlx_loop_hook(l.mlx, dead_win, &l);
 	mlx_loop_hook(l.mlx, animation, &l);
-	mlx_hook(l.window, 17, 0, ft_exit, &l);
+	mlx_hook(l.window, 17, 1, ft_exit, &l);
 	mlx_loop(l.mlx);
 }
 
